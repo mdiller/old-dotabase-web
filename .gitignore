@@ -1,1 +1,2 @@
-dota-vpk/
+/dota-vpk/*
+!/dota-vpk/index.php
