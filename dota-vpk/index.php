@@ -115,7 +115,7 @@ $_CONFIG['show_load_time'] = true;
 // The time format for the "last changed" column.
 // Default: $_CONFIG['time_format'] = "d.m.y H:i:s";
 //
-$_CONFIG['time_format'] = "d.m.y H:i:s";
+$_CONFIG['time_format'] = "d/m/Y";
 
 //
 // Charset. Use the one that suits for you.
