@@ -1,3 +1,3 @@
 <?php include "templates/header.php";?>
-hello there
+Main page
 <?php include "templates/footer.php";?>
