@@ -3,7 +3,13 @@ $dotabase = new PDO("sqlite:c:\Development\Projects\dotabase\dotabase.db");
 
 $keyphrase = @$_GET['keyphrase']?: '';
 
-$result = $dotabase->query("SELECT * FROM responses WHERE text LIKE '%" . $keyphrase . "%' LIMIT 100");
+$result = $dotabase->query("
+SELECT r.text, r.mp3, r.name, h.icon AS heroicon
+FROM responses as r 
+JOIN heroes as h ON r.hero_id=h.id 
+WHERE text LIKE '%" . $keyphrase . "%' 
+ORDER BY LENGTH(r.text) DESC 
+LIMIT 100");
 
 include "../templates/header.php";
 ?>
@@ -33,3 +39,7 @@ foreach($result as $response)
 
 include "../templates/footer.php";
 ?>
+<script>
+	// For discord copy buttons
+	new Clipboard('.btn');
+</script>

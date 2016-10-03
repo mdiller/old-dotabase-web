@@ -10,12 +10,36 @@ body {
 }
 
 div.response {
-	max-width: 50%;
+	max-width: 350px;
 	margin: 0 auto;
 	text-align: center;
 	padding: 5px;
 }
 
-div.response img {
-	
+div.soundtitle {
+	color: #15B48C;
+	padding: 5px;
+}
+
+div.soundtitle img {
+	width: 24px;
+	height: 24px;
+}
+
+div.soundbar {
+	padding: 5px 0px 0px 0px;
+}
+
+div.soundbar audio {
+	vertical-align: middle;
+}
+
+div.soundbar button.btn {
+	vertical-align: middle;
+	padding: 0px;
+}
+
+div.soundbar button.btn img {
+	width: 32px;
+	height: 32px;
 }
