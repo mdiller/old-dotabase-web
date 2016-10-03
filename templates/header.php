@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 
-<?php $siteurl = "http://" . $_SERVER['SERVER_NAME']; ?>
-
-<?php $sitedir = __DIR__ . "/.."; ?>
+<?php 
+$siteurl = "http://" . $_SERVER['SERVER_NAME'];
+$sitedir = __DIR__ . "/.."; 
+$vpkpath = $siteurl . "/dota-vpk";
+?>
 
 <html lang="en">
 

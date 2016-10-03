@@ -1,4 +1,21 @@
 body {
 	padding-top: 70px; /* Padding for top navbar */
 	background-color: #121717;
+	color: #FFFFFF;
+}
+
+.input-group {
+	max-width: 40%;
+	margin: 0 auto;
+}
+
+div.response {
+	max-width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 5px;
+}
+
+div.response img {
+	
 }
