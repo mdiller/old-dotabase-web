@@ -1,7 +1,11 @@
 body {
 	padding-top: 70px; /* Padding for top navbar */
-	background-color: #121717;
+	background-color: #262626;
 	color: #FFFFFF;
+}
+
+.navbar {
+	background-color: #121717;
 }
 
 .input-group {

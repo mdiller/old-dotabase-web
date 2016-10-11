@@ -1049,7 +1049,7 @@ function css()
 /* General styles */
 
 BODY {
-	background-color:#121717;
+	background-color:#262626;
 	font-family:Verdana;
 	font-size:small;
 }
@@ -1092,7 +1092,7 @@ div.subtitle{
 }
 
 #frame {
-	border: 1px solid #121717;
+	border: 1px solid #262626;
 	text-align:left;
 	position: relative;
 	margin: 0 auto;
