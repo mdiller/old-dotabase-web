@@ -1,5 +1,6 @@
 <?php 
-$dotabase = new PDO("sqlite:c:\Development\Projects\dotabase\dotabase.db");
+include "../templates/dotabasepath.php"
+$dotabase = new PDO("sqlite:" + $dotabasepath);
 
 $keyphrase = @$_GET['keyphrase']?: '';
 

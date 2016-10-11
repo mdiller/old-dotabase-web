@@ -1,3 +1,4 @@
 /dota-vpk/*
 !/dota-vpk/index.php
 venv/
+dotabasepath.php
