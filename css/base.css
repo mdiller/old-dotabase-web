@@ -1,17 +1,42 @@
 body {
 	padding-top: 70px; /* Padding for top navbar */
-	background-color: #262626;
+	background-color: #121717;
 	color: #FFFFFF;
 }
 
-.navbar {
-	background-color: #121717;
+h1 {
+	color: black;
+	font-size: 64px;
+	text-shadow: 2px 2px 5px black;
 }
 
-.input-group {
-	max-width: 40%;
-	margin: 0 auto;
+fieldset {
+	max-width: 400px;
+	margin: auto;
 }
+
+fieldset > * {
+	margin: 3px 0px;
+}
+
+.input-group select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+
+#sortdir + label:before {
+	content:"▼";
+}
+#sortdir:checked + label:before {
+	content:"▲";
+}
+#sortdir {
+	display:none;
+}
+.input-group-addon label {
+	margin: 0;
+}
+
 
 div.response {
 	max-width: 400px;
