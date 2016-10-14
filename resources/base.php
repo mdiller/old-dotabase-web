@@ -15,11 +15,11 @@ defined("CSS_PATH")
 defined("JS_PATH")
 	or define("JS_PATH", SITE_PATH . "js/");
 
-defined("VPK_PATH")
-	or define("VPK_PATH", SITE_PATH . "dota-vpk/");
-
 defined("SITE_URL")
 	or define("SITE_URL", "http://" . $_SERVER['SERVER_NAME']);
+
+defined("VPK_PATH")
+	or define("VPK_PATH", SITE_URL . "/dota-vpk");
 
 
 defined("HEADER")

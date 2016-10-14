@@ -11,12 +11,12 @@ $sortdir = @$_GET['sortdir']?: "DESC";
 $sortby_dict = array(
 	"text" => "LENGTH(r.text)",
 	"rand" => "RANDOM()",
-	"crit" => "[group]",
+	"crit" => "responserule_name",
 );
 $sortby = $sortby_dict[$sortby];
 
 $responses = $dotabase->query("
-SELECT DISTINCT r.text, r.mp3, r.name, h.icon AS heroicon, g.responserule_name as [group]
+SELECT DISTINCT r.text, r.mp3, r.name, h.icon AS heroicon
 FROM responses as r 
 LEFT JOIN responsegroupings as g ON r.fullname=g.response_fullname
 JOIN heroes as h ON r.hero_id=h.id 
