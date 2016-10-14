@@ -24,6 +24,7 @@ body {
 }
 
 h1 {
+	font-family: "Arial Black", Gadget, sans-serif;
 	color: black;
 	font-size: 64px;
 	font-weight: bold;
