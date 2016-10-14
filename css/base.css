@@ -4,12 +4,6 @@ body {
 	color: #FFFFFF;
 }
 
-h1 {
-	color: black;
-	font-size: 64px;
-	text-shadow: 2px 2px 5px black;
-}
-
 fieldset {
 	max-width: 400px;
 	margin: auto;
