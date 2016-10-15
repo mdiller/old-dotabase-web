@@ -1046,126 +1046,61 @@ function css()
 ?>
 <style type="text/css">
 
-/* General styles */
-
-BODY {
-	background-color:#262626;
-	font-family:Verdana;
-	font-size:small;
+#frame {
+	margin: auto;
+	max-width: 680px;
 }
 
-A {
+/* General styles */
+#frame A {
+	font-family:Verdana;
+	font-size:small;
 	color: #FFFFFF;
 	text-decoration: none;
 }
 
-A:hover {
+#frame A:hover {
 	text-decoration: underline;
 }
 
-#top {
-	width:100%;
-	padding-bottom: 20px;
-}
-
-#top a span, #top a:hover, #top a span:hover{
-	color:#68a9d2;
-	font-weight:bold;
-	text-align:center;
-	font-size:large;
-}
-
-#top a {
-	display:block;
-	padding:20px 0 0 0;
-}
-
-#top span {
-	display:block;
-}
-
-div.subtitle{
-	width:80%;
-	margin: 0 auto;
-	color:#68a9d2;
-	text-align:center;
-}
-
-#frame {
-	border: 1px solid #262626;
-	text-align:left;
-	position: relative;
-	margin: 0 auto;
-	max-width:680px;
-	overflow:hidden;
-}
-
-#error {
-	max-width:450px;
-	background-color:#FFE4E1;
-	color:#000000;
-	padding:7pt;
-	position: relative;
-	margin: 10pt auto;
-	text-align:center;
-	border: 1px dotted #CDD2D6;
-}
-
-input {
-	border: 1px solid #CDD2D6;
-}
-
-.bar{
-	width:100%;
-	clear:both;
-	height:1px;
-}
-
 /* File list */
-
-table.table {
+table {
 	width:100%;
 	border-collapse: collapse;
 	table-layout: fixed;
 	word-wrap: break-word;
 }
-
-table.table td{
+table td{
 	padding:3px;
 }
-
-table.table tr.row.two {
+table tr.row.two {
 	background-color:#454545;
 }
-
-table.table tr.row.one {
+table tr.row.one {
 	background-color:#555555;
 }
-
-table.table tr.row td.icon {
+table tr.row td.icon {
 	width:25px;
 	padding-top:3px;
 	padding-bottom:1px;
 }
-
-table.table td.del {
+table td.del {
 	width:25px;
 }
-
-table.table tr.row td.size {
+table tr.row td.size {
 	width: 100px;
 	text-align: right;
 }
-
-table.table tr.row td.changed {
+table tr.row td.changed {
 	width: 150px;
 	text-align: center;
 }
-
-table.table tr.header img {
+table tr.header img {
 	vertical-align:bottom;
 }
-
+table td.name {
+	width: 100%;
+}
 table img{
 	border:0;
 }
@@ -1272,7 +1207,7 @@ div.breadcrumbs a{
 /* Mobile interface */
 
 body.mobile #frame, body.mobile #info, body.mobile #upload {
-	max-width:none;
+	max-width: none;
 }
 
 body.mobile {
@@ -2940,12 +2875,11 @@ class EncodeExplorer
 		global $_ERROR;
 		global $_START_TIME;
 ?>
-<!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $this->getConfig('lang'); ?>" lang="<?php print $this->getConfig('lang'); ?>">
-<head>
-<meta name="viewport" content="width=device-width" />
-<meta http-equiv="Content-Type" content="text/html; charset=<?php print $this->getConfig('charset'); ?>">
-<?php css(); ?>
+<?php 
+include "../resources/base.php";
+include HEADER;
+css();
+ ?>
 <!-- <meta charset="<?php print $this->getConfig('charset'); ?>" /> -->
 <?php
 if(($this->getConfig('log_file') != null && strlen($this->getConfig('log_file')) > 0)
@@ -3025,9 +2959,7 @@ $(document).ready(function() {
 <?php
 }
 ?>
-<title><?php if(EncodeExplorer::getConfig('main_title') != null) print EncodeExplorer::getConfig('main_title'); ?></title>
-</head>
-<body class="<?php print ($this->mobile == true?"mobile":"standard");?>">
+<!-- <body class="<?php print ($this->mobile == true?"mobile":"standard");?>"> -->
 <?php
 //
 // Print the error (if there is something to print)
@@ -3042,16 +2974,6 @@ if(isset($_ERROR) && strlen($_ERROR) > 0)
 if(EncodeExplorer::getConfig('show_top') == true)
 {
 ?>
-<div id="top">
-	<a href="<?php print $this->makeLink(false, false, null, null, null, ""); ?>"><span><?php if(EncodeExplorer::getConfig('main_title') != null) print EncodeExplorer::getConfig('main_title'); ?></span></a>
-<?php
-if(EncodeExplorer::getConfig("secondary_titles") != null && is_array(EncodeExplorer::getConfig("secondary_titles")) && count(EncodeExplorer::getConfig("secondary_titles")) > 0 && $this->mobile == false)
-{
-	$secondary_titles = EncodeExplorer::getConfig("secondary_titles");
-	print "<div class=\"subtitle\">".$secondary_titles[array_rand($secondary_titles)]."</div>\n";
-}
-?>
-</div>
 <?php
 }
 
@@ -3081,7 +3003,7 @@ if($this->mobile == false && EncodeExplorer::getConfig("show_path") == true)
 ?>
 
 <!-- START: List table -->
-<table class="table">
+<table>
 <?php
 if($this->mobile == false)
 {
@@ -3245,34 +3167,9 @@ if(GateKeeper::isAccessAllowed() && $this->location->uploadAllowed() && (GateKee
 }
 
 ?>
-<!-- START: Info area -->
-<div id="info">
-<?php
-if(GateKeeper::isUserLoggedIn())
-	print "<a href=\"".$this->makeLink(false, true, null, null, null, "")."\">".$this->getString("log_out")."</a> | ";
-
-if(EncodeExplorer::getConfig("mobile_enabled") == true)
-{
-	print "<a href=\"".$this->makeLink(true, false, null, null, null, $this->location->getDir(false, true, false, 0))."\">\n";
-	print ($this->mobile == true)?$this->getString("standard_version"):$this->getString("mobile_version")."\n";
-	print "</a> | \n";
-}
-if(GateKeeper::isAccessAllowed() && $this->getConfig("calculate_space_level") > 0 && $this->mobile == false)
-{
-	print $this->getString("total_used_space").": ".$this->spaceUsed." MB | ";
-}
-if($this->mobile == false && $this->getConfig("show_load_time") == true)
-{
-	printf($this->getString("page_load_time")." | ", (microtime(TRUE) - $_START_TIME)*1000);
-}
-?>
-<a href="http://encode-explorer.siineiolekala.net">Encode Explorer</a>
-</div>
-<!-- END: Info area -->
-</body>
-</html>
 
 <?php
+include FOOTER;
 	}
 }
 
