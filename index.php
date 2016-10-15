@@ -18,6 +18,7 @@ include HEADER;
 
 
 <style>
+
 body {
 	background-size: 100% 100%;
 	background-image: url("<?php echo $screen; ?>");
@@ -28,7 +29,7 @@ h1 {
 	color: black;
 	font-size: 64px;
 	font-weight: bold;
-	text-shadow: 0px 0px 10px white;
+	text-shadow: 0 0 5px black, 0 0 10px white;
 }
 </style>
 

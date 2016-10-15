@@ -1,7 +1,16 @@
 body {
-	padding-top: 70px; /* Padding for top navbar */
 	background-color: #121717;
 	color: #FFFFFF;
+}
+
+.navbar-brand {
+    padding:0;
+}
+
+.navbar-brand img {
+	position: relative;
+	top: -3px;
+    height: 64px;
 }
 
 fieldset {
