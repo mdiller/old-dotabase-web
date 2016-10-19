@@ -2,32 +2,41 @@
 include "../resources/base.php";
 $dotabase = new PDO("sqlite:" . $dotabasepath);
 
-$keyphrase = @$_GET['keyphrase']?: '';
-$hero = @$_GET['hero']?: '';
-$concept = @$_GET['concept']?: '';
-$sortby = @$_GET['sortby']?: "text";
-$sortdir = @$_GET['sortdir']?: "DESC";
+$keyphrase = get_get('keyphrase', '');
+$hero = get_get('hero', '');
+$concept = get_get('concept', '');
+$sortby = get_get('sortby', 'text');
+$sortdir = get_get('sortdir', false, 'bool');
+
+if($sortby == "text") { $sortdir = !$sortdir; }
 
 $sortby_dict = array(
 	"text" => "LENGTH(r.text)",
 	"rand" => "RANDOM()",
 	"crit" => "responserule_name",
+	"resp" => "r.name",
 );
 $sortby = $sortby_dict[$sortby];
+$sortdir = $sortdir ? "DESC" : "ASC";
+$keyphrase = "%" . $keyphrase . "%";
+$hero = "%" . $hero . "%";
+$concept = "%_" . $concept . "%";
 
-$responses = $dotabase->query("
+$statement = $dotabase->prepare("
 SELECT DISTINCT r.text, r.mp3, r.name, h.icon AS heroicon
 FROM responses as r 
 LEFT JOIN responsegroupings as g ON r.fullname=g.response_fullname
 JOIN heroes as h ON r.hero_id=h.id 
-WHERE text LIKE '%" . $keyphrase ."%' 
+WHERE text LIKE ? 
 AND text!='' 
-AND h.name LIKE '%" . $hero . "%'
-AND responserule_name LIKE '%_" . $concept . "%'
+AND h.name LIKE ? 
+AND responserule_name LIKE ? 
 ORDER BY " . $sortby . " " . $sortdir ." 
 LIMIT 100");
+$statement->execute(array($keyphrase, $hero, $concept));
+$responses = $statement->fetchAll();
 
-$herolist = $dotabase->query("SELECT localized_name, name from heroes");
+$herolist = $dotabase->query("SELECT localized_name, name from heroes ORDER BY localized_name");
 $conceptlist = $dotabase->query("SELECT name FROM criteria WHERE matchkey='Concept' ORDER BY name");
 
 include HEADER;
@@ -60,9 +69,10 @@ include HEADER;
 				<option <?php echo form_value("sortby", "select", "text"); ?>>Text Length</option>
 				<option <?php echo form_value("sortby", "select", "crit"); ?>>Criteria</option>
 				<option <?php echo form_value("sortby", "select", "rand"); ?>>Random</option>
+				<option <?php echo form_value("sortby", "select", "resp"); ?>>Response Name</option>
 			</select>
 			<span class="input-group-addon">
-				<input id="sortdir" name="sortdir" type="checkbox" value="ASC" <?php echo form_value("sortdir", "checkbox"); ?>>
+				<input id="sortdir" name="sortdir" type="checkbox" <?php echo form_value("sortdir", "checkbox"); ?>>
 				<label for="sortdir"></label>
 			</span>
 		</div>

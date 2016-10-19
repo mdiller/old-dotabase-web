@@ -29,4 +29,22 @@ function form_value($name, $type, $select_value = ''){
 	return '';
 };
 
+function get_get($name, $default, $type='string'){
+	if(isset($_GET[$name])){
+		switch($type){
+			case 'string':{
+				return htmlspecialchars($_GET[$name]);
+				break;
+			}
+			case 'bool':{
+				return true;
+				break;
+			}
+			default:
+				throw new Exception("Invalid type for get_get: " . $type);
+				return "ERROR";
+		}
+	}
+	return $default;
+}
 ?>
