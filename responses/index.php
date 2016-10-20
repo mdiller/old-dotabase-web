@@ -22,6 +22,7 @@ if($keyphrase != "")
 $sortby = $sortby_dict[$sortby];
 $sortdir = $sortdir ? "DESC" : "ASC";
 $keyphrase = "%" . $keyphrase . "%";
+$hero = "%" . $hero . "%";
 $concept = "%_" . $concept . "%";
 
 $statement = $dotabase->prepare("
