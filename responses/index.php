@@ -16,6 +16,8 @@ $sortby_dict = array(
 	"crit" => "responserule_name",
 	"resp" => "r.name",
 );
+$keyphrase = " " . strtolower(preg_replace("/[^a-z0-9A-Z\s]/", "", $keyphrase)) . " ";
+
 $sortby = $sortby_dict[$sortby];
 $sortdir = $sortdir ? "DESC" : "ASC";
 $keyphrase = "%" . $keyphrase . "%";
@@ -27,7 +29,7 @@ SELECT DISTINCT r.text, r.mp3, r.name, h.icon AS heroicon
 FROM responses as r 
 LEFT JOIN responsegroupings as g ON r.fullname=g.response_fullname
 JOIN heroes as h ON r.hero_id=h.id 
-WHERE text LIKE ? 
+WHERE text_simple LIKE ? 
 AND text!='' 
 AND h.name LIKE ? 
 AND responserule_name LIKE ? 
