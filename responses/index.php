@@ -1,6 +1,6 @@
 <?php
 include "../resources/base.php";
-$dotabase = new PDO("sqlite:" . $dotabasepath);
+$dotabase = new PDO("sqlite:" . DOTABASE_PATH . "/dotabase.db");
 
 $keyphrase = get_get('keyphrase', '');
 $hero = get_get('hero', '');
