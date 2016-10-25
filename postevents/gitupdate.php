@@ -1,5 +1,7 @@
 <?php
+ob_start();
 include "../resources/base.php";
+ob_end_clean();
 
 if (!empty($_REQUEST['payload'])) {
 	$data = json_decode($_REQUEST['payload'], true);
@@ -22,8 +24,8 @@ if (!empty($_REQUEST['payload'])) {
 		die(1);
 	}
 	else {
-		echo $output . "\n";
-		echo "updated " . $repo . " at " . mktime();
+		echo $output;
+		echo "updated " . $repo . " at " . time();
 		die(0);
 	}
 }
