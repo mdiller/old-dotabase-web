@@ -5,13 +5,13 @@ $dotabase = new PDO("sqlite:" . DOTABASE_PATH . "/dotabase.db");
 $keyphrase = get_get('keyphrase', '');
 $hero = get_get('hero', '');
 $concept = get_get('concept', '');
-$sortby = get_get('sortby', 'text');
+$sortby = get_get('sortby', '');
 $sortdir = get_get('sortdir', false, 'bool');
 
-if($sortby == "text") { $sortdir = !$sortdir; }
+if($sortby == "") { $sortdir = !$sortdir; }
 
 $sortby_dict = array(
-	"text" => "LENGTH(r.text)",
+	"" => "LENGTH(r.text)",
 	"rand" => "RANDOM()",
 	"crit" => "responserule_name",
 	"resp" => "r.name",
@@ -45,7 +45,7 @@ $conceptlist = $dotabase->query("SELECT name FROM criteria WHERE matchkey='Conce
 include HEADER;
 ?>
 
-<form id="search" action="index.php" method="get">
+<form id="search" method="get">
 	<fieldset>
 		<input name="keyphrase" 
 			type="text" 
@@ -69,7 +69,7 @@ include HEADER;
 		<div class="input-group">
 			<span class="input-group-addon" id="basic-addon1">Sort By:</span>
 			<select name="sortby" class="form-control">
-				<option <?php echo form_value("sortby", "select", "text"); ?>>Text Length</option>
+				<option <?php echo form_value("sortby", "select", ""); ?>>Text Length</option>
 				<option <?php echo form_value("sortby", "select", "crit"); ?>>Criteria</option>
 				<option <?php echo form_value("sortby", "select", "rand"); ?>>Random</option>
 				<option <?php echo form_value("sortby", "select", "resp"); ?>>Response Name</option>
@@ -97,4 +97,13 @@ include FOOTER;
 <script>
 	// For discord copy buttons
 	new Clipboard('.btn');
+	$('form#search').submit(function(e){
+		var emptyinputs = $(this).find('select').filter(function(){
+		return !$.trim(this.value).length;  
+		}).prop('disabled',true);    
+
+		var emptyinputs = $(this).find('input').filter(function(){
+		return !$.trim(this.value).length;  
+		}).prop('disabled',true);    
+	});
 </script>
