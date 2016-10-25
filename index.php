@@ -14,7 +14,7 @@ $screen = str_replace("\\", "/", $screen);
 include HEADER;
 ?>
 
-<h1>Dotabase!</h1>
+<h1>Dotabase</h1>
 
 
 <style>
