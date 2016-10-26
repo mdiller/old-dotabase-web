@@ -25,6 +25,17 @@
 <div class="row">
 	<?php echo $hero['bio']; ?>
 </div>
+<h2>JSON Data</h2>
+<div id="json_data" value="">
+
+
+<script type="text/javascript" src="<?php echo JS_URL; ?>renderjson.js"></script>
+<script>
+	renderjson.set_icons('▶', '▼');
+	document.getElementById("json_data").appendChild(
+        renderjson(<?php echo $hero['json_data'] ?>)
+    );
+</script>
 
 <style type="text/css">
 	h1 {
@@ -33,5 +44,21 @@
 	}
 	div.row {
 		padding: 5px;
+	}
+	.renderjson {
+		background-color: #222222;
+		color: #FFFFFF;
+	}
+	.renderjson a { 
+		text-decoration: none; 
+	}
+	.renderjson .syntax { 
+		color: grey; 
+	}
+	.renderjson .number { 
+		color: cyan; 
+	}
+	.renderjson .key { 
+		color: lightblue; 
 	}
 </style>
