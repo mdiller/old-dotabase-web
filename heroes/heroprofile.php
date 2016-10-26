@@ -31,7 +31,7 @@
 		display: inline-block;
 		margin: 10px;
 	}
-	div {
+	div.row {
 		padding: 5px;
 	}
 </style>
