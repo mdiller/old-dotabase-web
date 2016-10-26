@@ -8,10 +8,6 @@ defined("RESOURCES")
 
 defined("SITE_PATH")
 	or define("SITE_PATH", RESOURCES . "../");
-
-defined("CSS_PATH")
-	or define("CSS_PATH", SITE_PATH . "css/");
-
 defined("JS_PATH")
 	or define("JS_PATH", SITE_PATH . "js/");
 
@@ -20,6 +16,12 @@ defined("SITE_URL")
 
 defined("VPK_PATH")
 	or define("VPK_PATH", SITE_URL . "/dota-vpk");
+
+defined("CSS_URL")
+	or define("CSS_URL", SITE_URL . "/css/");
+
+defined("JS_URL")
+	or define("JS_URL", SITE_URL . "/js/");
 
 
 defined("HEADER")
@@ -37,9 +39,7 @@ include RESOURCES . "dotabasepath.php";
 <!-- Bootstrap Core CSS -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom CSS -->
-<style>
-<?php include CSS_PATH . "base.css"; ?>
-</style>
+<link href="<?php echo CSS_URL ?>base.css" rel="stylesheet">
 
 
 <!--Javascript file includes -->
