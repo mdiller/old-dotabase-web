@@ -1,12 +1,12 @@
 <tr>
 	<td>
 		<div style="white-space:nowrap" align='left'>
-			<img src='<?php echo VPK_PATH . $hero['icon']; ?>' alt='hero icon' height='25'> 
+			<img src='<?php echo VPK_PATH . $hero['icon']; ?>' alt='hero icon' height='24'> 
 			<?php echo $hero['localized_name']; ?>
 		</div>
 	</td>
 	<td data-value="<?php echo $hero['attr_primary']; ?>">
-		<img src='<?php echo $attr_icon_dict[$hero['attr_primary']]; ?>' alt='primary attribute' height='25'>
+		<img src='<?php echo $attr_icon_dict[$hero['attr_primary']]; ?>' alt='primary attribute' height='24'>
 	</td>
 	<td><?php echo $hero['attr_base_strength']; ?></td>
 	<td><?php echo $hero['attr_strength_gain']; ?></td>

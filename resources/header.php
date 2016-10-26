@@ -34,6 +34,9 @@
 						<a href=<?php echo SITE_URL . "/heroes/statstable" ?>>Hero Stats Table</a>
 					</li>
 					<li>
+						<a href=<?php echo SITE_URL . "/heroes" ?>>Heroes</a>
+					</li>
+					<li>
 						<a href=<?php echo SITE_URL . "/dota-vpk" ?>>VPK files</a>
 					</li>
 				</ul>
