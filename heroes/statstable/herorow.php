@@ -22,6 +22,6 @@
 	<td><?php echo $hero['attack_projectile_speed']; ?></td>
 	<td><?php echo $hero['attack_damage_min']; ?></td>
 	<td><?php echo $hero['attack_damage_max']; ?></td>
-	<td><?php echo $hero['attack_rate']; ?></td>
 	<td><?php echo $hero['attack_point']; ?></td>
+	<td><?php echo $hero['attack_rate']; ?></td>
 </tr>

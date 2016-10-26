@@ -1,13 +1,17 @@
+.table-header-rotated {
+	width: auto;
+}
+
 .table-header-rotated th.row-header{
 	width: auto;
 }
 
 .table-header-rotated td{
 	width: 40px;
-	border: 2px solid #888888;
-	padding: 3px !important;
+	border: 2px solid #666666;
+	padding: 5px !important;
 	vertical-align: middle;
-	text-align: right;
+	text-align: center;
 }
 
 .table-header-rotated th.rotate-45{
@@ -16,9 +20,8 @@
 	min-width: 40px;
 	max-width: 40px;
 	position: relative;
-	vertical-align: bottom;
 	padding: 0;
-	font-size: 12px;
+	font-size: 15px;
 	line-height: 0.8;
 	left: 60px;
 	transform: skew(-45deg, 0deg);
@@ -34,19 +37,22 @@
 	left: 0px;
 	height: 100%;
 	overflow: hidden;
-	border: 1px solid #888888;
-	vertical-align: bottom;
+	border: 1px solid #666666;
 }
 
 .table-header-rotated th.rotate-45 span {
 	transform: skew(45deg, 0deg) rotate(-45deg);
 	position: absolute;
-	bottom: 50px; /* 40 cos(45) = 28 with an additional 2px margin*/
-	left: -50px; /*Because it looked good, but there is probably a mathematical link here as well*/
+	top: 50px; /* 40 cos(45) = 28 with an additional 2px margin*/
+	right: -50px; /*Because it looked good, but there is probably a mathematical link here as well*/
 	display: inline-block;
 	width: 141px; /* 120 / cos(45) - 40 cos (45) = 85 where 120 is the height of the cell, 40 the width of the cell and 45 the transform angle*/
 	text-align: left;
 	white-space: nowrap; /*whether to display in one line or not*/
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;
+  user-select: none;
 }
 
 table.sortable th  {

@@ -14,7 +14,7 @@ $attr_icon_dict = array(
 include HEADER;
 ?>
 
-<table id="hero-table" class="table table-sm table-responsive table-header-rotated sortable">
+<table id="hero-table" class="table table-sm table-header-rotated sortable">
 	<thead>
 		<th data-defaultsort="asc"><div>Hero</div></th>
 		<th class="rotate-45"><div><span>Primary Attribute</span></div></th>
@@ -32,8 +32,8 @@ include HEADER;
 		<th class="rotate-45"><div><span>Projectile Speed</span></div></th>
 		<th class="rotate-45"><div><span>Attack Damage Min</span></div></th>
 		<th class="rotate-45"><div><span>Attack Damage Max</span></div></th>
-		<th class="rotate-45"><div><span>Attack Rate</span></div></th>
 		<th class="rotate-45"><div><span>Attack Point</span></div></th>
+		<th class="rotate-45"><div><span>Attack Rate</span></div></th>
 	</thead>
 	<tbody>
 		<?php 
