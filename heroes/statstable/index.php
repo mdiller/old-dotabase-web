@@ -1,15 +1,11 @@
 <?php
 include "../../resources/base.php";
 
-$dotabase = new PDO("sqlite:" . DOTABASE_PATH . "/dotabase.db");
+define("TITLE", "Hero Stats");
+
+$dotabase = init_dotabase();
 
 $heroes = $dotabase->query("SELECT * from heroes ORDER BY localized_name");
-
-$attr_icon_dict = array(
-	"DOTA_ATTRIBUTE_STRENGTH" => (VPK_PATH . "/resource/flash3/images/heroes/selection/pip_str.png"),
-	"DOTA_ATTRIBUTE_INTELLECT" => (VPK_PATH . "/resource/flash3/images/heroes/selection/pip_int.png"),
-	"DOTA_ATTRIBUTE_AGILITY" => (VPK_PATH . "/resource/flash3/images/heroes/selection/pip_agi.png"),
-);
 
 include HEADER;
 ?>
@@ -45,8 +41,6 @@ include HEADER;
 	</tbody>
 </table>
 
-<!-- Table Header Rotation -->
-<link href="<?php echo CSS_URL; ?>table-header-rotation.css" rel="stylesheet">
 <!-- Sortable Tables -->
 <script src="<?php echo JS_URL; ?>bootstrap-sortable.js"></script>
 

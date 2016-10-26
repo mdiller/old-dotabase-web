@@ -8,7 +8,7 @@
 
 .table-header-rotated td{
 	width: 40px;
-	border: 2px solid #666666;
+	border: 2px solid var(--trim-color);
 	padding: 5px !important;
 	vertical-align: middle;
 	text-align: center;
@@ -35,7 +35,7 @@
 	left: 0px;
 	height: 100%;
 	overflow: hidden;
-	border: 1px solid #666666;
+	border: 1px solid var(--trim-color);
 }
 
 .table-header-rotated th.rotate-45 span {
@@ -60,9 +60,9 @@ table.sortable th  {
 
 table.sortable th.rotate-45.down > div {
 	background: grey; /* For browsers that do not support gradients */
-	background: linear-gradient(grey, #121717);
+	background: linear-gradient(grey, var(--background-color));
 }
 table.sortable th.rotate-45.up > div {
-	background: #121717; /* For browsers that do not support gradients */
-	background: linear-gradient(#121717, grey);
+	background: var(--background-color); /* For browsers that do not support gradients */
+	background: linear-gradient(var(--background-color), grey);
 }

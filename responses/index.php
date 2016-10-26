@@ -1,6 +1,9 @@
 <?php
 include "../resources/base.php";
-$dotabase = new PDO("sqlite:" . DOTABASE_PATH . "/dotabase.db");
+
+define("TITLE", "Responses");
+
+$dotabase = init_dotabase();
 
 $keyphrase = get_get('keyphrase', '');
 $hero = get_get('hero', '');

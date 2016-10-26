@@ -1,0 +1,35 @@
+div.response {
+	max-width: 400px;
+	margin: 10px auto;
+	text-align: center;
+}
+
+div.soundtitle {
+	color: var(--itemtitle-color);
+	font-weight: bold;
+	font-size: 125%;
+	padding: 5px;
+}
+
+div.soundtitle img {
+	width: 24px;
+	height: 24px;
+}
+
+div.soundbar {
+	padding: 5px;
+}
+
+div.soundbar audio {
+	vertical-align: middle;
+}
+
+div.soundbar button.btn {
+	vertical-align: middle;
+	padding: 0px;
+}
+
+div.soundbar button.btn img {
+	width: 32px;
+	height: 32px;
+}

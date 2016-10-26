@@ -47,4 +47,5 @@ function get_get($name, $default, $type='string'){
 	}
 	return $default;
 }
+
 ?>

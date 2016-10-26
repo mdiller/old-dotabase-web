@@ -1,6 +1,13 @@
+:root {
+	--background-color: #121717;
+	--text-color: #FFFFFF;
+	--trim-color: #666666;
+	--itemtitle-color: #15B48C;
+}
+
 body {
-	background-color: #121717;
-	color: #FFFFFF;
+	background-color: var(--background-color);
+	color: var(--text-color);
 }
 
 .navbar-brand {
@@ -38,58 +45,4 @@ fieldset > * {
 }
 .input-group-addon label {
 	margin: 0;
-}
-
-
-div.response {
-	max-width: 400px;
-	margin: 10px auto;
-	text-align: center;
-}
-
-div.soundtitle {
-	color: #15B48C;
-	font-weight: bold;
-	font-size: 125%;
-	padding: 5px;
-}
-
-div.soundtitle img {
-	width: 24px;
-	height: 24px;
-}
-
-div.soundbar {
-	padding: 5px;
-}
-
-div.soundbar audio {
-	vertical-align: middle;
-}
-
-div.soundbar button.btn {
-	vertical-align: middle;
-	padding: 0px;
-}
-
-div.soundbar button.btn img {
-	width: 32px;
-	height: 32px;
-}
-
-div.herocard {
-	display: inline-block;
-	transition: all .2s ease-in-out;
-}
-
-div.herocard:hover {
-	transform: scale(1.2);
-}
-
-div.herocard > input {
-	width: 71px !important; /* 71 53 */
-	height: 94px !important; /* 94 70 */
-	border: none;
-	font-size: 0;
-	line-height: 0;
 }

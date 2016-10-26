@@ -31,6 +31,7 @@ defined("FOOTER")
 
 include RESOURCES . "helpers.php";
 include RESOURCES . "dotabasepath.php";
+include RESOURCES . "dotabase.php";
 
 ?>
 
@@ -40,6 +41,10 @@ include RESOURCES . "dotabasepath.php";
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom CSS -->
 <link href="<?php echo CSS_URL ?>base.css" rel="stylesheet">
+<!-- Page-Specific CSS -->
+<?php if(file_exists("style.css")){ ?>
+<link href="style.css" rel="stylesheet">
+<?php } ?>
 
 
 <!--Javascript file includes -->

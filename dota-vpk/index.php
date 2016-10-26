@@ -1055,7 +1055,7 @@ function css()
 #frame A {
 	font-family:Verdana;
 	font-size:small;
-	color: #FFFFFF;
+	color: var(--text-color);
 	text-decoration: none;
 }
 
@@ -2877,6 +2877,7 @@ class EncodeExplorer
 ?>
 <?php 
 include "../resources/base.php";
+define("TITLE", "VPK Files");
 include HEADER;
 css();
  ?>
