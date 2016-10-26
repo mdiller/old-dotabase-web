@@ -1,60 +1,52 @@
 .table-header-rotated th.row-header{
-  width: auto;
+	width: auto;
 }
 
 .table-header-rotated td{
-  width: 40px;
-  border: 1px solid #888888;
-  padding: 3px !important;
-  vertical-align: middle;
-  text-align: right;
+	width: 40px;
+	border: 2px solid #888888;
+	padding: 3px !important;
+	vertical-align: middle;
+	text-align: right;
 }
 
 .table-header-rotated th.rotate-45{
-  height: 120px;
-  width: 40px;
-  min-width: 40px;
-  max-width: 40px;
-  position: relative;
-  vertical-align: bottom;
-  padding: 0;
-  font-size: 12px;
-  line-height: 0.8;
-  left: 60px;
-  -ms-transform:skew(-45deg,0deg);
-  -moz-transform:skew(-45deg,0deg);
-  -webkit-transform:skew(-45deg,0deg);
-  -o-transform:skew(-45deg,0deg);
-  transform:skew(-45deg,0deg);
+	height: 120px;
+	width: 40px;
+	min-width: 40px;
+	max-width: 40px;
+	position: relative;
+	vertical-align: bottom;
+	padding: 0;
+	font-size: 12px;
+	line-height: 0.8;
+	left: 60px;
+	transform: skew(-45deg, 0deg);
 }
 
 .table-header-rotated th.rotate-45:hover{
-  color: grey;
+	color: grey;
 }
 
 .table-header-rotated th.rotate-45 > div{
-  position: relative;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  overflow: hidden;
-  border: 1px solid #888888;
-  vertical-align: bottom;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	overflow: hidden;
+	border: 1px solid #888888;
+	vertical-align: bottom;
 }
 
 .table-header-rotated th.rotate-45 span {
-  -ms-transform:skew(45deg,0deg) rotate(315deg);
-  -moz-transform:skew(45deg,0deg) rotate(315deg);
-  -webkit-transform:skew(45deg,0deg) rotate(315deg);
-  -o-transform:skew(45deg,0deg) rotate(315deg);
-  transform:skew(45deg,0deg) rotate(315deg);
-  position: absolute;
-  bottom: 50px; /* 40 cos(45) = 28 with an additional 2px margin*/
-  left: -50px; /*Because it looked good, but there is probably a mathematical link here as well*/
-  display: inline-block;
-  width: 141px; /* 120 / cos(45) - 40 cos (45) = 85 where 120 is the height of the cell, 40 the width of the cell and 45 the transform angle*/
-  text-align: left;
-  white-space: nowrap; /*whether to display in one line or not*/
+	transform: skew(45deg, 0deg) rotate(-45deg);
+	position: absolute;
+	bottom: 50px; /* 40 cos(45) = 28 with an additional 2px margin*/
+	left: -50px; /*Because it looked good, but there is probably a mathematical link here as well*/
+	display: inline-block;
+	width: 141px; /* 120 / cos(45) - 40 cos (45) = 85 where 120 is the height of the cell, 40 the width of the cell and 45 the transform angle*/
+	text-align: left;
+	white-space: nowrap; /*whether to display in one line or not*/
 }
 
 table.sortable th  {
@@ -63,15 +55,9 @@ table.sortable th  {
 
 table.sortable th.rotate-45.down > div {
 	background: grey; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(grey, #121717); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(grey, #121717); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(grey, #121717); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(grey, #121717); /* Standard syntax */
+	background: linear-gradient(grey, #121717);
 }
 table.sortable th.rotate-45.up > div {
 	background: #121717; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(#121717, grey); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#121717, grey); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#121717, grey); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#121717, grey); /* Standard syntax */
+	background: linear-gradient(#121717, grey);
 }

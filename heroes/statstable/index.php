@@ -14,7 +14,7 @@ $attr_icon_dict = array(
 include HEADER;
 ?>
 
-<table id="hero-table" class="table table-responsive table-header-rotated sortable">
+<table id="hero-table" class="table table-sm table-responsive table-header-rotated sortable">
 	<thead>
 		<th data-defaultsort="asc"><div>Hero</div></th>
 		<th class="rotate-45"><div><span>Primary Attribute</span></div></th>
