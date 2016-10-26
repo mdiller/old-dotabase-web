@@ -15,16 +15,14 @@
 }
 
 .table-header-rotated th.rotate-45{
+	transform: skew(-45deg, 0deg);
 	height: 120px;
-	width: 40px;
 	min-width: 40px;
-	max-width: 40px;
 	position: relative;
 	padding: 0;
 	font-size: 15px;
 	line-height: 0.8;
 	left: 60px;
-	transform: skew(-45deg, 0deg);
 }
 
 .table-header-rotated th.rotate-45:hover{
@@ -57,6 +55,7 @@
 
 table.sortable th  {
 	cursor: pointer;
+	border-color: #666666 !important;
 }
 
 table.sortable th.rotate-45.down > div {
