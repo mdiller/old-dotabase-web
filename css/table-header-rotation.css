@@ -4,10 +4,10 @@
 
 .table-header-rotated td{
   width: 40px;
-  border-left: 1px solid #888888;
-  border-right: 1px solid #888888;
+  border: 1px solid #888888;
+  padding: 3px !important;
   vertical-align: middle;
-  text-align: center;
+  text-align: right;
 }
 
 .table-header-rotated th.rotate-45{
@@ -35,12 +35,11 @@
 .table-header-rotated th.rotate-45 > div{
   position: relative;
   top: 0px;
-  left: 0px; /* 120 * tan(45) / 2 = 40 where 120 is the height on the cell and 45 is the transform angle*/
+  left: 0px;
   height: 100%;
   overflow: hidden;
-  border-left: 1px solid #888888;
-  border-right: 1px solid #888888;
-  border-top: 1px solid #888888;
+  border: 1px solid #888888;
+  vertical-align: bottom;
 }
 
 .table-header-rotated th.rotate-45 span {
@@ -59,20 +58,20 @@
 }
 
 table.sortable th  {
-  cursor: pointer;
+	cursor: pointer;
 }
 
-table.sortable th.down {
-  background: grey; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(grey, #121717); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(grey, #121717); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(grey, #121717); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(grey, #121717); /* Standard syntax */
+table.sortable th.rotate-45.down > div {
+	background: grey; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(grey, #121717); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(grey, #121717); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(grey, #121717); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(grey, #121717); /* Standard syntax */
 }
-table.sortable th.up {
-  background: #121717; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#121717, grey); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#121717, grey); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#121717, grey); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#121717, grey); /* Standard syntax */
+table.sortable th.rotate-45.up > div {
+	background: #121717; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(#121717, grey); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#121717, grey); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#121717, grey); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#121717, grey); /* Standard syntax */
 }
