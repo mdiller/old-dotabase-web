@@ -94,6 +94,13 @@ foreach($responses as $response)
 	include "response.php";
 }
 
+if(empty($responses))
+{
+	echo "<div style='text-align: center;''>";
+	echo "no responses found";
+	echo "</div>";
+}
+
 include FOOTER;
 ?>
 <script>
