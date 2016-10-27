@@ -21,6 +21,7 @@ if (!empty($_REQUEST['payload'])) {
 	
 	if(is_null($output)) {
 		echo "error executing pull";
+		http_response_code(500);
 		die(1);
 	}
 	else {
