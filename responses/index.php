@@ -26,20 +26,19 @@ $sortby = $sortby_dict[$sortby];
 $sortdir = $sortdir ? "DESC" : "ASC";
 $keyphrase = "%" . $keyphrase . "%";
 $hero = "%" . $hero . "%";
-$concept = "%_" . $concept . "%";
+$concept = ($concept == "") ? "%" : $concept . " %";
 
 $statement = $dotabase->prepare("
 SELECT DISTINCT r.text, r.mp3, r.name, h.icon AS heroicon
 FROM responses as r 
-LEFT JOIN responsegroupings as g ON r.fullname=g.response_fullname
 JOIN heroes as h ON r.hero_id=h.id 
 WHERE text_simple LIKE ? 
 AND text != '' 
 AND h.name LIKE ? 
-AND responserule_name LIKE ? 
+AND (r.criteria LIKE ? OR r.criteria LIKE ?)
 ORDER BY " . $sortby . " " . $sortdir ." 
 LIMIT 100");
-$statement->execute(array($keyphrase, $hero, $concept));
+$statement->execute(array($keyphrase, $hero, $concept, "|" . $concept));
 $responses = $statement->fetchAll();
 
 $herolist = $dotabase->query("SELECT localized_name, name from heroes ORDER BY localized_name");
