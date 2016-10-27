@@ -41,6 +41,9 @@
 						<a href=<?php echo SITE_URL . "/heroes" ?>>Heroes</a>
 					</li>
 					<li>
+						<a href=<?php echo SITE_URL . "/abilities" ?>>Abilities(Beta)</a>
+					</li>
+					<li>
 						<a href=<?php echo SITE_URL . "/dota-vpk" ?>>VPK files</a>
 					</li>
 				</ul>

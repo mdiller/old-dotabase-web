@@ -1,0 +1,43 @@
+div.abilitycard {
+	display: inline-block;
+	transition: all .2s ease-in-out;
+}
+
+div.abilitycard:hover {
+	transform: scale(1.2);
+}
+
+div.abilitycard a img {
+	width: 32px;
+	height: 32px;
+}
+
+h1 {
+	display: inline-block;
+	margin: 10px;
+}
+
+div.row {
+	padding: 5px;
+}
+
+.renderjson {
+	background-color: var(--background-color);
+	color: var(--text-color);
+}
+
+.renderjson a { 
+	text-decoration: none; 
+}
+
+.renderjson .syntax { 
+	color: grey; 
+}
+
+.renderjson .number { 
+	color: cyan; 
+}
+
+.renderjson .key { 
+	color: lightblue; 
+}
