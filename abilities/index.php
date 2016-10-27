@@ -4,7 +4,7 @@ include "../resources/base.php";
 $dotabase = init_dotabase();
 
 if(!isset($_GET['ability'])) {
-	$abilities = $dotabase->query("SELECT * from abilities ORDER BY id");
+	$abilities = $dotabase->query("SELECT * from abilities WHERE hero_id IS NOT NULL ORDER BY id");
 	define("TITLE", "Abilities");
 
 	include HEADER;
