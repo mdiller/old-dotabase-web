@@ -1054,9 +1054,12 @@ function css()
 /* General styles */
 #frame A {
 	font-family:Verdana;
-	font-size:small;
 	color: var(--text-color);
 	text-decoration: none;
+}
+
+#frame {
+	font-size:small;
 }
 
 #frame A:hover {

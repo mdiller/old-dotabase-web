@@ -14,7 +14,7 @@
 	text-align: center;
 }
 
-.table-header-rotated th.rotate-45{
+.table-header-rotated th.rotate-45 {
 	transform: skew(-45deg, 0deg);
 	height: 120px;
 	min-width: 40px;
@@ -35,7 +35,12 @@
 	left: 0px;
 	height: 100%;
 	overflow: hidden;
-	border: 1px solid var(--trim-color);
+	border-right: 2px solid var(--trim-color);
+	border-top: 2px solid var(--trim-color);
+}
+
+.table-header-rotated th.rotate-45:nth-child(2) > div {
+	border-left: 2px solid var(--trim-color);
 }
 
 .table-header-rotated th.rotate-45 span {
