@@ -3,7 +3,9 @@
 	--text-color: #FFFFFF;
 	--trim-color: #666666;
 	--itemtitle-color: #15B48C;
-	--navbar-color: black;
+	--navbar-hover-color: rgba(66, 200, 255, 0.3);
+	--navbar-start-color: #262222;
+	--navbar-end-color: #0F151A;
 }
 
 body {
@@ -21,8 +23,13 @@ div.bodydiv > div.container {
 
 /* NAVBAR STUFF */
 
+
 nav.navbar {
-	background-color: var(--navbar-color);
+	background: linear-gradient(to right, 
+		var(--navbar-start-color) 0%, 
+		var(--navbar-start-color) 30%, 
+		var(--navbar-end-color) 70%,
+		var(--navbar-end-color) 100%);
 }
 
 div.navbar-header {
@@ -41,10 +48,10 @@ div.topbar {
 	width: 1581px;
 	height: 50px;
 	background : linear-gradient(to right, 
-		var(--navbar-color) 0%, 
+		var(--navbar-start-color) 0%, 
 		transparent 5%,
 		transparent 80%,
-		var(--navbar-color) 100%);
+		var(--navbar-end-color) 100%);
 }
 
 a.navbar-brand {
@@ -64,8 +71,8 @@ a.navbar-brand {
 	}
 
 	ul.navbar-nav li:hover {
-		background-color: rgba(66, 200, 255, 0.3);
-		box-shadow: 0 0 10px rgba(66, 200, 255, 0.3);
+		background-color: var(--navbar-hover-color);
+		box-shadow: 0 0 10px var(--navbar-hover-color);
 	}
 
 	ul.navbar-nav li a {
