@@ -3,6 +3,7 @@
 	--text-color: #FFFFFF;
 	--trim-color: #666666;
 	--itemtitle-color: #15B48C;
+	--navbar-color: black;
 }
 
 body {
@@ -10,15 +11,67 @@ body {
 	color: var(--text-color);
 }
 
-.navbar-brand {
-    padding:0;
+/* NAVBAR STUFF */
+
+nav.navbar {
+	background-color: var(--navbar-color);
 }
 
-.navbar-brand img {
+div.navbar-header {
 	position: relative;
-	top: -3px;
-    height: 64px;
+	margin-left: 30px !important;
 }
+
+.topbar {
+	position: absolute;
+	height: 135px;
+	left: -190px;
+	z-index:-1;
+}
+
+div.topbar {
+	width: 1581px;
+	height: 50px;
+	background : linear-gradient(to right, 
+		var(--navbar-color) 0%, 
+		transparent 5%,
+		transparent 80%,
+		var(--navbar-color) 100%);
+}
+
+a.navbar-brand {
+	min-width: 100px;
+	margin-left: 0px !important;
+	margin-right: 31px;
+}
+
+@media only screen and (min-width: 768px) {
+	ul.navbar-nav li {
+		width: 136px;
+		transform: skew(-18deg);
+		transition: 0.25s ease-in-out;
+	}
+	ul.navbar-nav li:first-child {
+		width: 131px;
+	}
+
+	ul.navbar-nav li:hover {
+		background-color: rgba(66, 200, 255, 0.3);
+		box-shadow: 0 0 10px rgba(66, 200, 255, 0.3);
+	}
+
+	ul.navbar-nav li a {
+		text-align: center;
+		white-space: nowrap;
+		transform: skew(18deg);
+	}
+}
+div.navbar-collapse {
+	border: none;
+	box-shadow: none;
+}
+
+/* FORMS STUFF */
 
 fieldset {
 	max-width: 400px;

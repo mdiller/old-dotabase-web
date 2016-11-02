@@ -25,23 +25,22 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href=<?php echo SITE_URL ?>>
-					 <img src="<?php echo VPK_PATH; ?>/panorama/images/topbar/home_logo_hover_png.png">
+
 				</a>
+				<img class="topbar" src="<?php echo VPK_PATH; ?>/panorama/images/topbar/topbar_png.png">
+				<div class="topbar"></div>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li>
-						<a href=<?php echo SITE_URL . "/responses" ?>>Hero Responses</a>
+						<a href=<?php echo SITE_URL . "/responses" ?>>Responses</a>
 					</li>
 					<li>
 						<a href=<?php echo SITE_URL . "/heroes/statstable" ?>>Hero Stats Table</a>
 					</li>
 					<li>
 						<a href=<?php echo SITE_URL . "/heroes" ?>>Heroes</a>
-					</li>
-					<li>
-						<a href=<?php echo SITE_URL . "/abilities" ?>>Abilities(Beta)</a>
 					</li>
 					<li>
 						<a href=<?php echo SITE_URL . "/dota-vpk" ?>>VPK files</a>
