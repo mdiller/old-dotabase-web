@@ -11,6 +11,14 @@ body {
 	color: var(--text-color);
 }
 
+div.bodydiv{
+	overflow-x: hidden;
+}
+
+div.bodydiv > div.container {
+	overflow-x: auto;
+}
+
 /* NAVBAR STUFF */
 
 nav.navbar {
