@@ -37,6 +37,14 @@ h1 {
 	-ms-user-select: none;
 	user-select: none;
 }
+
+@media (orientation:portrait) {
+	body {
+		background-size: auto 100%;
+		background-position: center;
+	}
+}
+
 </style>
 
 <?php include FOOTER; ?>
