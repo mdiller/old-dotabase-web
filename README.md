@@ -1,2 +1,2 @@
 # Dotabase Website
-A web interface to experiment with and show the functionality of the [Dotabase](https://gitlab.com/dillerm/dotabase "Dotabase") project.
+A web interface to experiment with and show the functionality of the [Dotabase](https://github.com/mdiller/dotabase "Dotabase") project. It is composed of a few web apps and pages showing dota information.
