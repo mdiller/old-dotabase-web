@@ -1,3 +1,7 @@
+#bodydiv > div.container {
+	padding-bottom: 10px;
+}
+
 div.herocard {
 	display: inline-block;
 	transition: all .2s ease-in-out;
