@@ -30,6 +30,12 @@ h1 {
 	font-size: 64px;
 	font-weight: bold;
 	text-shadow: 0 0 5px black, 0 0 10px white;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 </style>
 

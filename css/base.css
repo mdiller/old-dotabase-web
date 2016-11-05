@@ -1,6 +1,7 @@
 :root {
 	--background-color: #121717;
 	--text-color: #FFFFFF;
+	--Link-color: #AAAAAA;
 	--trim-color: #666666;
 	--itemtitle-color: #15B48C;
 	--navbar-hover-color: rgba(66, 200, 255, 0.3);
@@ -13,12 +14,35 @@ body {
 	color: var(--text-color);
 }
 
-div.bodydiv{
+#bodydiv{
 	overflow-x: hidden;
+	min-height: 100%;
+	height: auto;
+	/* Negative indent footer by its height */
+	margin: 0 auto -32px;
+	/* Pad bottom by footer height */
+	padding: 0 0 32px;
 }
 
-div.bodydiv > div.container {
+#bodydiv > div.container {
 	overflow-x: auto;
+}
+
+#footer {
+	height: 32px;
+	background: linear-gradient(to bottom, 
+		rgba(0, 0, 0, 0.3) 0%, 
+		rgba(0, 0, 0, 0.7) 100%);
+}
+#footer .container {
+	height: 100%;
+	line-height: 32px;
+	text-align: center;
+}
+
+#footer img {
+	height: 24px;
+	width: 24px;
 }
 
 /* NAVBAR STUFF */
@@ -81,11 +105,26 @@ a.navbar-brand {
 		text-align: center;
 		white-space: nowrap;
 		transform: skew(18deg);
+		transition: none;
 	}
 }
 div.navbar-collapse {
 	border: none;
 	box-shadow: none;
+}
+
+/* LINKS */
+
+a {
+	color: var(--Link-color);
+	transition: 0.25s ease-in-out;
+}
+
+a:hover {
+	color: var(--Link-color);
+	text-decoration: none;
+	opacity: 0.8;
+	text-shadow: 0 0 3px var(--Link-color);
 }
 
 /* FORMS STUFF */

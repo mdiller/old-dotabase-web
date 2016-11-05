@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<div class="bodydiv">
+	<div id="bodydiv">
 		<!-- Navigation -->
 		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
 			<div class="container">
