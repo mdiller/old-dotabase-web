@@ -38,6 +38,8 @@ div.navbar-header {
 }
 
 .topbar {
+	pointer-events: none;
+	cursor: default;
 	position: absolute;
 	height: 135px;
 	left: -190px;
