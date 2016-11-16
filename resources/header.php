@@ -8,7 +8,14 @@
 		<?php if(defined("TITLE")) { echo TITLE . " - "; } ?>
 		Dotabase
 	</title>
-	<?php if(defined("FAVICON")){ echo "<link rel='shortcut icon' href='" . FAVICON . "' type='image/png'>"; } ?>
+	<?php 
+	if(defined("FAVICON")) { 
+		echo "<link rel='shortcut icon' href='" . FAVICON . "' type='image/png'>"; 
+	} else {
+		echo "<link rel='shortcut icon' href='" . SITE_URL . "/resources/images/dota.png" . "' type='image/png'>"; 
+	}
+	?>
+	<link rel="apple-touch-icon-precomposed apple-touch-icon" href="<?php echo SITE_URL ?>/resources/images/dota.png">
 </head>
 
 <body>
