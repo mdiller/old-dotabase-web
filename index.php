@@ -8,9 +8,16 @@ foreach ($files as $file) {
         $screens[] = $file->getPathname();
 }
 $screen = $screens[array_rand($screens)];
+
+$img = imagecreatefrompng($screen);
+
+imageinterlace($img, true);
+
+imagepng($img, $screen);
+imagedestroy($img);
+
 $screen = str_replace(SITE_PATH . "dota-vpk", VPK_PATH, $screen);
 $screen = str_replace("\\", "/", $screen);
-
 include HEADER;
 ?>
 
