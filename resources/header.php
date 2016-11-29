@@ -15,7 +15,22 @@
 		echo "<link rel='shortcut icon' href='" . SITE_URL . "/resources/images/dota.png" . "' type='image/png'>"; 
 	}
 	?>
-	<link rel="apple-touch-icon-precomposed apple-touch-icon" href="<?php echo SITE_URL ?>/resources/images/dota.png">
+
+	<link rel="apple-touch-icon-precomposed apple-touch-icon icon" href="<?php echo SITE_URL ?>/resources/images/dota.png">
+
+	<!-- Theme color -->
+	<meta name="theme-color" content="#00FF00">
+	<meta name="msapplication-navbutton-color" content="#00FF00">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#00FF00">
+
+	<!-- Opengraph Metadata -->
+	<meta property="og:title" content="Dotabase" />
+	<meta property="og:description" content="A collection of information about the game Dota 2" />
+	<meta property="og:type" content="image" />
+	<meta property="og:image" content="<?php echo SITE_URL ?>/resources/images/dota.png" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="128" />
+	<meta property="og:image:height" content="128" />
 </head>
 
 <body>

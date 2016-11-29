@@ -108,6 +108,10 @@ a.navbar-brand {
 		transform: skew(18deg);
 		transition: none;
 	}
+
+	ul.navbar-nav li a:hover {
+		text-shadow: none;
+	}
 }
 div.navbar-collapse {
 	border: none;
