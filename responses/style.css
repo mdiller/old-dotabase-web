@@ -1,6 +1,7 @@
 div.response {
 	max-width: 400px;
 	margin: 10px auto;
+	text-align: center;
 }
 
 div.soundtitle {
@@ -8,8 +9,8 @@ div.soundtitle {
 	font-weight: bold;
 	font-size: 125%;
 	height: 32px;
-	line-height: 32px;
-	margin: 5px;
+	line-height: 24px;
+	padding: 4px;
 }
 
 div.soundtitle div {
@@ -20,6 +21,10 @@ div.soundtitle div {
 div.soundtitle img {
 	width: 24px;
 	height: 24px;
+}
+
+div.soundtitle svg {
+	height: 100%;
 }
 
 

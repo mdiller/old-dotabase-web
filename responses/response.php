@@ -1,7 +1,7 @@
 <div class="response">
 	<div class="soundtitle">
 		<div class="speaker">
-			<svg height="32" width="32" viewBox="0 0 100 100">
+			<svg viewBox="0 0 100 100">
 				<path d="M0,0 L100,50 0,100 Z">
 					<animate attributeName="d" dur="200ms" fill="freeze" begin="indefinite"></animate>
 				</path>
