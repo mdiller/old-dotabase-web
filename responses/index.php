@@ -37,7 +37,7 @@ AND text != ''
 AND h.name LIKE ? 
 AND (r.criteria LIKE ? OR r.criteria LIKE ?)
 ORDER BY " . $sortby . " " . $sortdir ." 
-LIMIT 100");
+LIMIT 500");
 $statement->execute(array($keyphrase, $hero, $concept, "|" . $concept));
 $responses = $statement->fetchAll();
 
@@ -114,5 +114,31 @@ include FOOTER;
 		var emptyinputs = $(this).find('input').filter(function(){
 		return !$.trim(this.value).length;  
 		}).prop('disabled',true);    
+	});
+
+	// For custom audio elements
+	var pause_path = "M0,0 L33.33,0 33.33,100 0,100  M66.66,0 L100,0 100,100 66.66,100";
+	var play_path =  "M50,25 L100,50 100,50 50,75 M0,0 L50,25 50,75 0,100";
+
+	function animateAudio(speaker, isnowplaying) {
+		speaker.find("svg").find("animate").attr({
+			"from": isnowplaying ? pause_path : play_path,
+			"to": isnowplaying ? play_path : pause_path
+		}).get(0).beginElement();
+	}
+
+	$('.speaker').on('click touchend', function() {
+		var getaudio = $(this).find('audio')[0];
+		animateAudio($(this), !getaudio.paused);
+
+		if (getaudio.paused) {
+			getaudio.play();
+		} else {
+			getaudio.pause();
+		}
+	});
+
+	$('.speaker > audio').on('ended', function() {
+		animateAudio($(this).parent(), true);
 	});
 </script>
