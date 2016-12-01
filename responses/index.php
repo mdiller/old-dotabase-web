@@ -36,8 +36,7 @@ WHERE text_simple LIKE ?
 AND text != '' 
 AND h.name LIKE ? 
 AND (r.criteria LIKE ? OR r.criteria LIKE ?)
-ORDER BY " . $sortby . " " . $sortdir ." 
-LIMIT 500");
+ORDER BY " . $sortby . " " . $sortdir);
 $statement->execute(array($keyphrase, $hero, $concept, "|" . $concept));
 $responses = $statement->fetchAll();
 
@@ -89,8 +88,11 @@ include HEADER;
 </form>
 
 <?php 
+$i = 0; // For paging support
 foreach($responses as $response)
 {
+	if($i++ > 100) { break; }
+
 	include "response.php";
 }
 
@@ -105,7 +107,9 @@ include FOOTER;
 ?>
 <script>
 	// For discord copy buttons
-	new Clipboard('.btn');
+	new Clipboard('.copyclip');
+
+	// For submitting only non-empty values
 	$('form#search').submit(function(e){
 		var emptyinputs = $(this).find('select').filter(function(){
 		return !$.trim(this.value).length;  

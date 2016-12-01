@@ -132,6 +132,31 @@ a:hover {
 	text-shadow: 0 0 3px var(--Link-color);
 }
 
+/* CIRCLE LINKS STUFF */
+
+.circle-link {
+	display: inline-block;
+	border-radius: 100%;
+	height: 64px;
+	width: 64px;
+	transition: all 0.5s ease;
+}
+
+.circle-link:hover {
+	transform: rotate(360deg) scale(1.1);
+}
+
+.circle-link > img {
+	display: flex;
+	border-radius: 100%;
+	height: 100%;
+	width: 100%;
+}
+
+.copyclip {
+	cursor: pointer;
+}
+
 /* FORMS STUFF */
 
 fieldset {

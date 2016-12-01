@@ -13,12 +13,13 @@ div.soundtitle {
 	padding: 4px;
 }
 
-div.soundtitle div {
+div.soundtitle > div {
 	vertical-align: top;
 	display: inline-block;
+	position: relative;
 }
 
-div.soundtitle img {
+div.soundtitle > div > img {
 	width: 24px;
 	height: 24px;
 }
@@ -27,19 +28,46 @@ div.soundtitle svg {
 	height: 100%;
 }
 
-
-
-
-div.soundbar {
-	padding: 5px;
+.speaker {
+	position: relative;
 }
 
-div.soundbar button.btn {
-	vertical-align: middle;
-	padding: 0px;
-}
-
-div.soundbar button.btn img {
-	width: 32px;
+.circle-link {
 	height: 32px;
+	width: 32px;
+}
+
+.circle-link img {
+	border-radius: 0;
+}
+
+
+
+
+.link-menu-list {
+	position: absolute;
+	top: 50%;
+	transform: translate(-100%, -50%);
+	display: flex;
+	pointer-events: none;
+}
+
+div:hover > .link-menu-list {
+	visibility: visible;
+	pointer-events: all;
+}
+
+div:not(:hover) > .link-menu-list > *:last-child {
+	margin-right: 0;
+}
+
+div:not(:hover) > .link-menu-list > * {
+	width: 0;
+	height: 0;
+	transform: rotate(180deg) scale(0.0);
+	opacity: 0.0;
+}
+
+.link-menu-list a {
+	margin-right: 10px;
 }
