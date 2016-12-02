@@ -131,6 +131,10 @@ include FOOTER;
 		}).get(0).beginElement();
 	}
 
+	$('.speaker').on('touchstart', function(e) {
+		e.preventDefault();
+	});
+
 	$('.speaker').on('click touchend', function() {
 		var getaudio = $(this).find('audio')[0];
 		animateAudio($(this), !getaudio.paused);
