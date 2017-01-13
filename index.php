@@ -17,6 +17,10 @@ include HEADER;
 <h1>Dotabase</h1>
 
 
+<a class="link-button" href="<?php echo $screen; ?>" download>
+	<img src="<?php echo SITE_URL ?>/resources/images/download.svg"/>
+</a>
+
 <style>
 
 body {
@@ -43,6 +47,15 @@ h1 {
 		background-size: auto 100%;
 		background-position: center;
 	}
+}
+
+.link-button {
+	width: 48px;
+	height: 48px;
+	opacity: 0.5;
+	position: fixed;
+	right: 8px;
+	bottom: 40px;
 }
 
 </style>

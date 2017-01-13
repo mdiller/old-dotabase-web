@@ -32,13 +32,9 @@ div.soundtitle svg {
 	position: relative;
 }
 
-.circle-link {
+.link-button {
 	height: 32px;
 	width: 32px;
-}
-
-.circle-link img {
-	border-radius: 0;
 }
 
 

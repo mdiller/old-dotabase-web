@@ -2,14 +2,14 @@
 	<div class="soundtitle">
 		<div>
 			<div class="link-menu-list">
-				<a class="circle-link copyclip" data-clipboard-text="?dota <?php echo $response['name'] ?>">
-					<img src="<?php echo SITE_URL ?>/resources/images/discord.png"/>
+				<a class="link-button copyclip" data-clipboard-text="?dota <?php echo $response['name'] ?>">
+					<img src="<?php echo SITE_URL ?>/resources/images/discord.svg"/>
 				</a>
-				<a class="circle-link" href="<?php echo VPK_PATH . $response['mp3'] ?>">
-					<img src="<?php echo SITE_URL ?>/resources/images/link.png"/>
+				<a class="link-button" href="<?php echo VPK_PATH . $response['mp3'] ?>">
+					<img src="<?php echo SITE_URL ?>/resources/images/link.svg"/>
 				</a>
-				<a class="circle-link" href="<?php echo VPK_PATH . $response['mp3'] ?>" download>
-					<img src="<?php echo SITE_URL ?>/resources/images/download.png"/>
+				<a class="link-button" href="<?php echo VPK_PATH . $response['mp3'] ?>" download>
+					<img src="<?php echo SITE_URL ?>/resources/images/download.svg"/>
 				</a>
 			</div>
 			<div class="speaker">
