@@ -24,7 +24,7 @@
 	<?php echo $hero['bio']; ?>
 </div>
 <h2>JSON Data</h2>
-<div id="json_data" value="">
+<div id="json_data" value=""></div>
 
 
 <script type="text/javascript" src="<?php echo JS_URL; ?>renderjson.js"></script>
