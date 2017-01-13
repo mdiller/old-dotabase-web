@@ -1,5 +1,5 @@
 <?php
-include "../../resources/base.php";
+include "../resources/base.php";
 
 define("TITLE", "Hero Stats");
 

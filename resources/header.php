@@ -58,7 +58,7 @@
 							<a href=<?php echo SITE_URL . "/responses" ?>>Responses</a>
 						</li>
 						<li>
-							<a href=<?php echo SITE_URL . "/heroes/statstable" ?>>Hero Stats Table</a>
+							<a href=<?php echo SITE_URL . "/herostats" ?>>Hero Stats Table</a>
 						</li>
 						<li>
 							<a href=<?php echo SITE_URL . "/heroes" ?>>Heroes</a>

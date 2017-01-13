@@ -1,3 +1,5 @@
+<?php $hero = $item; ?>
+
 <div class="row">
 	<img src='<?php echo VPK_PATH . $hero['image']; ?>' alt='hero image'> 
 	<h1><?php echo $hero['localized_name']; ?></h1>
@@ -26,10 +28,10 @@
 <h2>JSON Data</h2>
 <div id="json_data" value=""></div>
 
-
 <script type="text/javascript" src="<?php echo JS_URL; ?>renderjson.js"></script>
 <script>
 	renderjson.set_icons('▶', '▼');
+	renderjson.set_show_to_level(1);
 	document.getElementById("json_data").appendChild(
         renderjson(<?php echo $hero['json_data'] ?>)
     );

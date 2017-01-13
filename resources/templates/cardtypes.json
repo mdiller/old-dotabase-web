@@ -1,0 +1,36 @@
+{
+	"heroes": {
+		"title": "Heroes",
+		"key": "name",
+		"query": "SELECT * FROM heroes ORDER BY localized_name",
+		"table": "heroes",
+		"profile": "heroprofile.php",
+		"card_img": "portrait",
+		"card_width": 64,
+		"card_height": 85,
+		"profile_title": "localized_name",
+		"profile_icon": "icon"
+	},
+	"abilities": {
+		"title": "Abilities",
+		"key": "name",
+		"query": "SELECT * FROM abilities WHERE hero_id IS NOT NULL ORDER BY id",
+		"table": "abilities",
+		"profile": "abilityprofile.php",
+		"card_img": "icon",
+		"card_width": 48,
+		"card_height": 48,
+		"profile_title": "localized_name"
+	},
+	"items": {
+		"title": "Items",
+		"key": "name",
+		"query": "SELECT * FROM items WHERE name NOT LIKE '%recipe%' ORDER BY id",
+		"table": "items",
+		"profile": "itemprofile.php",
+		"card_img": "icon",
+		"card_width": 66,
+		"card_height": 48,
+		"profile_title": "localized_name"
+	}
+}

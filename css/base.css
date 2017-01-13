@@ -183,3 +183,46 @@ fieldset > * {
 .input-group-addon label {
 	margin: 0;
 }
+
+/* RENDERJSON */
+
+.renderjson {
+	background-color: var(--background-color);
+	color: var(--text-color);
+}
+
+.renderjson a { 
+	text-decoration: none; 
+}
+
+.renderjson .syntax { 
+	color: grey; 
+}
+
+.renderjson .number { 
+	color: cyan; 
+}
+
+.renderjson .key { 
+	color: lightblue; 
+}
+
+/* CARDS N PROFILES */
+
+div.itemcard {
+	display: inline-block;
+	transition: all .2s ease-in-out;
+}
+
+div.itemcard:hover {
+	transform: scale(1.2);
+}
+
+div.profile h1 {
+	display: inline-block;
+	margin: 10px;
+}
+
+div.profile div.row {
+	padding: 5px;
+}
