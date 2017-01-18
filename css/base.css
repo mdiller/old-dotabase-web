@@ -226,3 +226,15 @@ div.profile h1 {
 div.profile div.row {
 	padding: 5px;
 }
+
+/* MATCH IMG STUFF */
+
+.match-table td, .match-table th {
+	padding-right: 10px;
+}
+.match-table tr:nth-child(5) {
+	border-bottom: 5px solid white;
+}
+.money-row {
+	color: yellow;
+}
