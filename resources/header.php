@@ -19,9 +19,9 @@
 	<link rel="apple-touch-icon-precomposed apple-touch-icon icon" href="<?php echo SITE_URL ?>/resources/images/dota.png">
 
 	<!-- Theme color -->
-	<meta name="theme-color" content="#121717">
-	<meta name="msapplication-navbutton-color" content="#121717">
-	<meta name="apple-mobile-web-app-status-bar-style" content="#121717">
+	<meta name="theme-color" content="#23272A">
+	<meta name="msapplication-navbutton-color" content="#23272A">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#23272A">
 
 	<!-- Opengraph Metadata -->
 	<meta property="og:title" content="Dotabase" />

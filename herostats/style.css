@@ -52,15 +52,15 @@
 	width: 141px; /* 120 / cos(45) - 40 cos (45) = 85 where 120 is the height of the cell, 40 the width of the cell and 45 the transform angle*/
 	text-align: left;
 	white-space: nowrap; /*whether to display in one line or not*/
-  -webkit-user-select: none;   /* Chrome/Safari/Opera */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;
-  user-select: none;
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;
+	user-select: none;
 }
 
 table.sortable th  {
 	cursor: pointer;
-	border-color: #666666 !important;
+	border-color: var(--trim-color) !important;
 }
 
 table.sortable th.rotate-45.down > div {
