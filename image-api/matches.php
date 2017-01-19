@@ -1,6 +1,11 @@
-<!DOCTYPE html>
 <?php
 include "../resources/base.php";
+ob_end_clean();
+?> 
+<!DOCTYPE html>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<?php
+echo "<link href='" . CSS_URL . "base.css' rel='stylesheet'>";
 
 $dotabase = init_dotabase();
 $heroes = $dotabase->query("SELECT * from heroes ORDER BY localized_name");
