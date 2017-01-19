@@ -232,9 +232,52 @@ div.profile div.row {
 .match-table td, .match-table th {
 	padding-right: 10px;
 }
+.match-table {
+	margin-top: 5px;
+}
+.match-table th {
+	background-color: var(--trim-color);
+}
+.match-table td:last-child, .match-table th:last-child {
+	padding-right: 0;
+}
 .match-table tr:nth-child(5) {
-	border-bottom: 5px solid white;
+	border-bottom: 3px solid var(--trim-color);
 }
 .money-row {
 	color: yellow;
+}
+.match-table img {
+	height: 24px;
+}
+.match-table .items img {
+	width: 33px;
+}
+.match-table tbody {
+	border: 3px solid var(--trim-color);
+}
+
+.match-title {
+	vertical-align: middle;
+	height: 32px;
+	line-height: 32px;
+	font-size: 24px;
+	white-space: nowrap;
+	font-weight: bold;
+}
+
+.match-title svg {
+	vertical-align: middle;
+	width: 32px;
+	height: 32px;
+}
+
+svg.radiant {
+	filter: drop-shadow(0 0 5px green);
+	fill: white;
+}
+
+svg.dire {
+	filter: drop-shadow(0 0 5px red);
+	fill: black;
 }
