@@ -70,15 +70,3 @@ img {
 	width: 64px;
 	height: 64px;
 }
-
-svg.radiant {
-	-webkit-filter: drop-shadow(0 0 10px green);
-	filter: drop-shadow(0 0 10px green);
-	fill: white;
-}
-
-svg.dire {
-	-webkit-filter: drop-shadow(0 0 10px red);
-	filter: drop-shadow(0 0 10px red);
-	fill: black;
-}
