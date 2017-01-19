@@ -1,10 +1,6 @@
-:root {
-	--background-color: #23272A;
-	--trim-color: #2C2F33;
-}
 
 body {
-	background-color: var(--background-color);
+	background-color: #23272A;
 	color: white;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 14px;
@@ -38,14 +34,14 @@ img {
 	margin-top: 5px;
 }
 .match-table th {
-	background-color: var(--trim-color);
+	background-color: #2C2F33;
 	text-align: left;
 }
 .match-table td:last-child, .match-table th:last-child {
 	padding-right: 0;
 }
 .match-table tr:nth-child(5) {
-	border-bottom: 3px solid var(--trim-color);
+	border-bottom: 3px solid #2C2F33;
 }
 .money-row {
 	color: yellow;
@@ -57,7 +53,7 @@ img {
 	width: 33px;
 }
 .match-table tbody {
-	border: 3px solid var(--trim-color);
+	border: 3px solid #2C2F33;
 }
 
 .match-title {
