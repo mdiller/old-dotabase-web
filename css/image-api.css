@@ -3,8 +3,7 @@ body {
 	background-color: #23272A;
 	color: white;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size: 14px;
-	line-height: 1.42857143;
+	font-size: 28px;
 }
 
 :before, :after {
@@ -28,10 +27,10 @@ img {
 }
 
 .match-table td, .match-table th {
-	padding-right: 10px;
+	padding-right: 20px;
 }
 .match-table {
-	margin-top: 5px;
+	margin-top: 10px;
 }
 .match-table th {
 	background-color: #2C2F33;
@@ -41,42 +40,42 @@ img {
 	padding-right: 0;
 }
 .match-table tr:nth-child(5) {
-	border-bottom: 3px solid #2C2F33;
+	border-bottom: 6px solid #2C2F33;
 }
 .money-row {
 	color: yellow;
 }
 .match-table img {
-	height: 24px;
+	height: 48px;
 }
 .match-table .items img {
-	width: 33px;
+	width: 66px;
 }
 .match-table tbody {
-	border: 3px solid #2C2F33;
+	border: 6px solid #2C2F33;
 }
 
 .match-title {
 	vertical-align: middle;
-	height: 32px;
-	line-height: 32px;
-	font-size: 24px;
+	height: 64px;
+	line-height: 64px;
+	font-size: 48px;
 	white-space: nowrap;
 	font-weight: bold;
 }
 
 .match-title svg {
 	vertical-align: middle;
-	width: 32px;
-	height: 32px;
+	width: 64px;
+	height: 64px;
 }
 
 svg.radiant {
-	filter: drop-shadow(0 0 5px green);
+	filter: drop-shadow(0 0 10px green);
 	fill: white;
 }
 
 svg.dire {
-	filter: drop-shadow(0 0 5px red);
+	filter: drop-shadow(0 0 10px red);
 	fill: black;
 }
