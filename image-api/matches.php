@@ -1,10 +1,5 @@
 <?php
 include "../resources/base.php";
-ob_end_clean();
-echo "<!DOCTYPE html>";
-echo "<style>";
-include SITE_PATH . "/css/image-api.css";
-echo "</style>";
 
 $dotabase = init_dotabase();
 $heroes = $dotabase->query("SELECT * from heroes ORDER BY localized_name");
@@ -52,7 +47,13 @@ if($response == false){
 
 $match = json_decode($response, true);
 
-$is_parsed = get($match['radiant_gold_adv']) != null
+$is_parsed = get($match['radiant_gold_adv']) != null;
+
+ob_end_clean();
+echo "<!DOCTYPE html>";
+echo "<style>";
+include SITE_PATH . "/css/image-api.css";
+echo "</style>";
 
 ?>
 <html>
@@ -72,10 +73,10 @@ else {
 </div>
 <table class="match-table">
 	<thead>
-		<th>Player</th>
-		<th>K</th>
-		<th>D</th>
-		<th>A</th>
+		<th>&nbspPlayer</th>
+		<th class="center">K</th>
+		<th class="center">D</th>
+		<th class="center">A</th>
 		<th class="money-row">GPM</th>
 		<?php if($is_parsed){ ?>
 		<th>APM</th>

@@ -5,6 +5,7 @@ body {
 	color: white;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 28px;
+	font-weight: bold;
 }
 
 :before, :after {
@@ -30,9 +31,6 @@ img {
 .match-table td, .match-table th {
 	padding-right: 20px;
 }
-.match-table {
-	margin-top: 10px;
-}
 .match-table th {
 	background-color: #2C2F33;
 	text-align: left;
@@ -56,6 +54,10 @@ img {
 	border: 6px solid #2C2F33;
 }
 
+.match-table .center {
+	text-align: center;
+}
+
 .match-title {
 	vertical-align: middle;
 	height: 64px;
@@ -63,10 +65,26 @@ img {
 	font-size: 48px;
 	white-space: nowrap;
 	font-weight: bold;
+	color: <?php echo $match['radiant_win'] ? "green" : "red"; ?>;
 }
 
 .match-title svg {
 	vertical-align: middle;
-	width: 64px;
-	height: 64px;
+	width: 56px;
+	height: 56px;
+	margin-bottom: 8px;
+}
+
+svg.radiant {
+	-webkit-svg-shadow: 0 0 64px green;
+	-webkit-filter: drop-shadow(0 0 10px green);
+	filter: drop-shadow(0 0 10px green);
+	fill: white;
+}
+
+svg.dire {
+	-webkit-svg-shadow: 0 0 64px red;
+	-webkit-filter: drop-shadow(0 0 10px red);
+	filter: drop-shadow(0 0 10px red);
+	fill: black;
 }
