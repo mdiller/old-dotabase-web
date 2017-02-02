@@ -7,7 +7,7 @@ $dotabase = init_dotabase();
 
 $keyphrase = get_get('keyphrase', '');
 $hero = get_get('hero', '');
-$concept = get_get('concept', '');
+$criteria = get_get('criteria', '');
 $sortby = get_get('sortby', '');
 $sortdir = get_get('sortdir', false, 'bool');
 
@@ -26,7 +26,7 @@ $sortby = $sortby_dict[$sortby];
 $sortdir = $sortdir ? "DESC" : "ASC";
 $keyphrase = "%" . $keyphrase . "%";
 $hero = "%" . $hero . "%";
-$concept = ($concept == "") ? "%" : $concept . " %";
+$criteria = ($criteria == "") ? "%" : $criteria . " %";
 
 $statement = $dotabase->prepare("
 SELECT DISTINCT r.text, r.mp3, r.name, h.icon AS heroicon
@@ -37,11 +37,11 @@ AND text != ''
 AND h.name LIKE ? 
 AND (r.criteria LIKE ? OR r.criteria LIKE ?)
 ORDER BY " . $sortby . " " . $sortdir);
-$statement->execute(array($keyphrase, $hero, $concept, "|" . $concept));
+$statement->execute(array($keyphrase, $hero, $criteria, "|" . $criteria));
 $responses = $statement->fetchAll();
 
 $herolist = $dotabase->query("SELECT localized_name, name from heroes ORDER BY localized_name");
-$conceptlist = $dotabase->query("SELECT name FROM criteria WHERE matchkey='Concept' ORDER BY name");
+$criterialist = $dotabase->query("SELECT name, pretty FROM criteria WHERE (matchkey='Concept' AND pretty IS NOT NULL AND pretty != '') ORDER BY pretty");
 
 include HEADER;
 ?>
@@ -60,11 +60,11 @@ include HEADER;
 				echo "<option " . form_value("hero", "select", $hero['name']) . ">" . $hero['localized_name'] . "</option>";
 			?>
 		</select>
-		<select name="concept" class="form-control">
-			<option value="">Any Concept</option>
+		<select name="criteria" class="form-control">
+			<option value="">Any Criteria</option>
 			<?php
-			foreach($conceptlist as $concept)
-				echo "<option" . form_value("concept", "select", $concept['name']) . ">" . $concept['name'] . "</option>";
+			foreach($criterialist as $criteria)
+				echo "<option" . form_value("criteria", "select", $criteria['name']) . ">" . $criteria['pretty'] . "</option>";
 			?>
 		</select>
 		<div class="input-group">
