@@ -19,14 +19,6 @@ $fileurl = SITE_URL . "/image-api/images/" . $filename;
 $scriptpath = __DIR__ . "/webkit2png.js";
 
 $output = shell_exec("phantomjs " . $scriptpath . " " . $queryurl . " " . $filepath);
-	
-if(is_null($output)) {
-	$success = false;
-	$fileurl = null;
-	echo $queryurl . "\n";
-	echo $filepath . "\n";
-	http_response_code(500);
-}
 
 
 $data = array('success' => $success, 'file' => $fileurl);
