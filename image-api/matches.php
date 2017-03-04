@@ -20,7 +20,10 @@ function get(&$var, $default=null) {
 function get_lane($player) {
 	$lane_dict = array( 1 => "Bot", 3 => "Top" );
 	$lane_role_dict = array( 1 => "Safe", 2 => "Mid", 3 => "Off", 4 => "Jungle" );
-	if (isset($lane_dict[$player['lane']])) {
+	if (isset($player['is_roaming']) && $player['is_roaming']) {
+		return "Roaming";
+	}
+	else if (isset($lane_dict[$player['lane']])) {
 		return sprintf("%s(%s)", $lane_role_dict[$player['lane_role']], $lane_dict[$player['lane']]);
 	}
 	else {
