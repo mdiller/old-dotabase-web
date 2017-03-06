@@ -50,7 +50,7 @@ if($response == false){
 
 $match = json_decode($response, true);
 
-$is_parsed = get($match['radiant_gold_adv']) != null;
+$is_parsed = get($match['version']) != null;
 
 ob_end_clean();
 echo "<!DOCTYPE html>";
