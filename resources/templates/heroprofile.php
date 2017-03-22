@@ -6,18 +6,18 @@
 </div>
 <div class="row">
 	<div>
-		<img class="attricon" src='<?php echo attr_icon('DOTA_ATTRIBUTE_STRENGTH'); ?>' alt='strength' height='32'> 
-		<?php echo $hero['attr_base_strength']; ?>
+		<img class="attricon" src='<?php echo attr_icon('strength'); ?>' alt='strength' height='32'> 
+		<?php echo $hero['attr_strength_base']; ?>
 		+ <?php echo $hero['attr_strength_gain']; ?>
 	</div>
 	<div>
-		<img class="attricon" src='<?php echo attr_icon('DOTA_ATTRIBUTE_INTELLECT'); ?>' alt='intelligence' height='32'> 
-		<?php echo $hero['attr_base_intelligence']; ?>
+		<img class="attricon" src='<?php echo attr_icon('intelligence'); ?>' alt='intelligence' height='32'> 
+		<?php echo $hero['attr_intelligence_base']; ?>
 		+ <?php echo $hero['attr_intelligence_gain']; ?>
 	</div>
 	<div>
-		<img class="attricon" src='<?php echo attr_icon('DOTA_ATTRIBUTE_AGILITY'); ?>' alt='agility' height='32'> 
-		<?php echo $hero['attr_base_agility']; ?>
+		<img class="attricon" src='<?php echo attr_icon('agility'); ?>' alt='agility' height='32'> 
+		<?php echo $hero['attr_agility_base']; ?>
 		+ <?php echo $hero['attr_agility_gain']; ?>
 	</div>
 </div>

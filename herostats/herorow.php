@@ -8,11 +8,11 @@
 	<td data-value="<?php echo $hero['attr_primary']; ?>">
 		<img src='<?php echo attr_icon($hero['attr_primary']); ?>' alt='primary attribute' height='24'>
 	</td>
-	<td><?php echo $hero['attr_base_strength']; ?></td>
+	<td><?php echo $hero['attr_strength_base']; ?></td>
 	<td><?php echo $hero['attr_strength_gain']; ?></td>
-	<td><?php echo $hero['attr_base_intelligence']; ?></td>
+	<td><?php echo $hero['attr_intelligence_base']; ?></td>
 	<td><?php echo $hero['attr_intelligence_gain']; ?></td>
-	<td><?php echo $hero['attr_base_agility']; ?></td>
+	<td><?php echo $hero['attr_agility_base']; ?></td>
 	<td><?php echo $hero['attr_agility_gain']; ?></td>
 	<td><?php echo $hero['base_health_regen']; ?></td>
 	<td><?php echo $hero['base_armor']; ?></td>
