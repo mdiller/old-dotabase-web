@@ -104,7 +104,7 @@ async def draw_match_table(match):
 	headers = [
 		TextCell("", padding=0),
 		TextCell(""),
-		TextCell("Player"),
+		TextCell(""),
 		TextCell("K", horizontal_align="center"),
 		TextCell("D", horizontal_align="center"),
 		TextCell("A", horizontal_align="center"),
