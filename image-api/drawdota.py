@@ -163,8 +163,11 @@ async def main(loop, match_id, out_directory, vpkpath):
 		filename = f"match_{match_id}.png"
 		if data.get("version"):
 			filename = f"parsed_{filename}"
-		print(filename)
-		await create_match_image(f"{out_directory}/{filename}", data)
+		try:
+			await create_match_image(f"{out_directory}/{filename}", data)
+			print(filename)
+		except Exception as e:
+			print(f"Error Occured: {e}")
 
 
 if __name__ == '__main__':

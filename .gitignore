@@ -3,3 +3,5 @@
 venv/
 dotabasepath.php
 image-api/images/
+
+__pycache__

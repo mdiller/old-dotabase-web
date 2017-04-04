@@ -20,7 +20,7 @@ $filepath = __DIR__ . "/images/";
 $scriptpath = __DIR__ . "/drawdota.py";
 $fileurl = SITE_URL . "/image-api/images/";
 
-$output = shell_exec("python3.6 " . $scriptpath . " " . $matchid . " " . $filepath . " " . VPK_PATH);
+$output = shell_exec("python3.6 " . $scriptpath . " " . $matchid . " " . $filepath . " " . SITE_PATH . "dota-vpk");
 
 $data = array('file' => $fileurl . trim($output));
 header('Content-Type: application/json;charset=utf-8');
