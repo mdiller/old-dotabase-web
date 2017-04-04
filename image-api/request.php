@@ -8,37 +8,23 @@ if(!isset($_GET['match'])){
 	echo "match not set";
 	die(1);
 }
-if(!isset($_GET['parsed'])){
+if(!is_numeric($_GET['match'])){
 	http_response_code(500);
-	echo "parsed not set";
+	echo "matchid should be a number";
 	die(1);
 }
 
 $matchid = $_GET['match'];
-$is_parsed = $_GET['parsed'] == "true";
 
-$filename = "match_" . $matchid . ".png";
-if($is_parsed){
-	$filename = "parsed_" . $filename;
-}
-$queryurl = SITE_URL . "/image-api/matches.php?match=" . $matchid;
-$filepath = __DIR__ . "/images/" . $filename;
-$fileurl = SITE_URL . "/image-api/images/" . $filename;
-$scriptpath = __DIR__ . "/webkit2png.js";
+$filepath = __DIR__ . "/images/";
+$scriptpath = __DIR__ . "/drawdota.py";
+$fileurl = SITE_URL . "/image-api/images/";
 
-$output = shell_exec("phantomjs " . $scriptpath . " " . $queryurl . " " . $filepath);
+$output = shell_exec("python3.6 " . $scriptpath . " " . $matchid . " " . $filepath . " " . VPK_PATH);
 
-
-$data = array('file' => $fileurl);
+$data = array('file' => $fileurl . trim($output));
 header('Content-Type: application/json;charset=utf-8');
 echo json_encode($data);
 die(0);
-
-/*
-tempfile = "{}temp/match_{}.png".format(settings.resourcedir, match_id)
-webkit2png = settings.resourcedir + "scripts/webkit2png.js"
-url = "http://dotabase.me/image-api/matches.php?match={}".format(match_id)
-helpers.run_command(["phantomjs", webkit2png, url, tempfile])
-*/
 
 ?>
