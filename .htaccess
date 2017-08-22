@@ -1,3 +1,2 @@
 RewriteEngine On
 RewriteRule ^(heroes|abilities|items)/?([^/]*)$ resources/templates/cardsnprofiles.php?type=$1&key=$2 [NC,L]
-RewriteRule ^matches/([0-9]+)$ image-api/matches.php?match=$1 [NC,L]
