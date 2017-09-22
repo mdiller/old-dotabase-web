@@ -1,2 +1,6 @@
 RewriteEngine On
 RewriteRule ^(heroes|abilities|items)/?([^/]*)$ resources/templates/cardsnprofiles.php?type=$1&key=$2 [NC,L]
+
+RewriteCond %{HTTP_HOST} ^dotabase.me [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.dotabase.me [NC]
+RewriteRule ^(.*)$ http://dotabase.dillerm.io/$1 [L,R=301,NC]
