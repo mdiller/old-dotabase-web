@@ -12,10 +12,10 @@ defined("JS_PATH")
 	or define("JS_PATH", SITE_PATH . "js/");
 
 defined("SITE_URL")
-	or define("SITE_URL", "http://" . $_SERVER['SERVER_NAME']);
+	or define("SITE_URL", "//" . $_SERVER['SERVER_NAME']);
 
 defined("VPK_PATH")
-	or define("VPK_PATH", SITE_URL . "/dota-vpk");
+	or define("VPK_PATH", "https://dotabase.dillerm.io/vpk");
 
 defined("CSS_URL")
 	or define("CSS_URL", SITE_URL . "/css/");
@@ -50,7 +50,7 @@ include RESOURCES . "dotabase.php";
 <!--Javascript file includes -->
 
 <!-- jQuery Version 1.11.1 -->
-<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- Clipboard Javascript -->
